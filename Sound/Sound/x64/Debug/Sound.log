@@ -1,0 +1,9 @@
+﻿  Song.cpp
+  Sound.cpp
+  TrackSong.cpp
+  Tracker.cpp
+C:\Users\Enrrique\source\repos\Sound\TrackSong.cpp(7,26): warning C4244: 'return': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Enrrique\source\repos\Sound\Tracker.cpp(33,9): warning C4244: 'return': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Enrrique\source\repos\Sound\Tracker.cpp(83,11): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+  Generando código...
+  Sound.vcxproj -> C:\Users\Enrrique\source\repos\Sound\x64\Debug\Sound.exe
