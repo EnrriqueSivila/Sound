@@ -60,19 +60,19 @@ void Tracker::printStars()
 
 void Tracker::printHistorialwithReate(int reat)
 {
+	int counter = 0;	
 	for (int i = 0; i < historicalTrack.size(); i++)
 	{
 		if (historicalTrack[i].raeting == reat)
 		{
-			cout << "Cancion: " << trackedSong.name << " ";
-			for (int j = 0; j < historicalTrack[i].raeting; j++)
-			{
-				cout << "#";
-			}
-			cout << endl;
+			cout << "Calificacion " << historicalTrack[i].raeting << endl;
+			counter++;
 		}
+
 	}
+	cout << "Cantidad de canciones con la misma calificacion " << reat << " : " << counter << endl;
 }
+
 
 
 void Tracker::printBarPercent()
