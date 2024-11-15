@@ -1,0 +1,150 @@
+Constructores y Destructor
+
+    list() – Crea una lista vacía.
+    explicit list(size_type count) – Crea una lista con un número específico de elementos, todos inicializados al valor predeterminado.
+    list(size_type count, const T& value) – Crea una lista con un número específico de elementos, todos inicializados a value.
+    list(InputIt first, InputIt last) – Crea una lista copiando el rango de elementos [first, last).
+    list(const list& other) – Constructor de copia.
+    list(list&& other) noexcept – Constructor de movimiento.
+    list(std::initializer_list<T> init) – Crea una lista a partir de una lista de inicialización.
+    ~list() – Destructor de la lista.
+
+Operadores
+
+    operator= – Operador de asignación.
+    assign(count, const T& value) – Reemplaza los elementos de la lista con count copias de value.
+    assign(InputIt first, InputIt last) – Reemplaza los elementos de la lista copiando el rango [first, last).
+    assign(std::initializer_list<T> ilist) – Reemplaza los elementos de la lista con los elementos de la lista de inicialización ilist.
+
+Element Access
+
+    front() – Retorna una referencia al primer elemento de la lista.
+    back() – Retorna una referencia al último elemento de la lista.
+
+Iteradores
+
+    begin() – Retorna un iterador al primer elemento de la lista.
+    end() – Retorna un iterador al final de la lista.
+    rbegin() – Retorna un iterador inverso al primer elemento de la lista (del final al principio).
+    rend() – Retorna un iterador inverso al final de la lista.
+    cbegin() – Retorna un iterador constante al primer elemento de la lista.
+    cend() – Retorna un iterador constante al final de la lista.
+    crbegin() – Retorna un iterador constante inverso al primer elemento de la lista.
+    crend() – Retorna un iterador constante inverso al final de la lista.
+
+Capacidad
+
+    empty() – Retorna true si la lista está vacía; de lo contrario, false.
+    size() – Retorna el número de elementos en la lista.
+    max_size() – Retorna el número máximo de elementos que la lista puede contener.
+
+Modificadores
+
+    clear() – Elimina todos los elementos de la lista.
+    insert(const_iterator pos, const T& value) – Inserta value en la posición pos.
+    insert(const_iterator pos, size_type count, const T& value) – Inserta count copias de value en pos.
+    insert(const_iterator pos, InputIt first, InputIt last) – Inserta los elementos en el rango [first, last) en pos.
+    insert(const_iterator pos, std::initializer_list<T> ilist) – Inserta elementos de la lista de inicialización ilist en pos.
+    emplace(const_iterator pos, Args&&... args) – Construye un elemento en la posición pos.
+    erase(const_iterator pos) – Elimina el elemento en pos.
+    erase(const_iterator first, const_iterator last) – Elimina el rango de elementos [first, last).
+    push_back(const T& value) – Añade value al final de la lista.
+    push_back(T&& value) – Añade value al final de la lista (movimiento).
+    push_front(const T& value) – Añade value al inicio de la lista.
+    push_front(T&& value) – Añade value al inicio de la lista (movimiento).
+    emplace_back(Args&&... args) – Construye un elemento al final de la lista.
+    emplace_front(Args&&... args) – Construye un elemento al inicio de la lista.
+    pop_back() – Elimina el último elemento de la lista.
+    pop_front() – Elimina el primer elemento de la lista.
+    resize(size_type count) – Cambia el tamaño de la lista a count elementos.
+    resize(size_type count, const T& value) – Cambia el tamaño de la lista a count elementos, inicializando nuevos elementos con value.
+    swap(list& other) – Intercambia el contenido de la lista con otra lista other.
+
+Operaciones de lista
+
+    merge(list& other) – Combina dos listas ordenadas.
+    merge(list&& other) – Combina dos listas ordenadas (movimiento).
+    merge(list& other, Compare comp) – Combina dos listas ordenadas usando una función de comparación comp.
+    splice(const_iterator pos, list& other) – Mueve todos los elementos de other a la posición pos.
+    splice(const_iterator pos, list&& other) – Mueve todos los elementos de other (movimiento).
+    splice(const_iterator pos, list& other, const_iterator it) – Mueve el elemento en it de other a la posición pos.
+    splice(const_iterator pos, list& other, const_iterator first, const_iterator last) – Mueve el rango [first, last) de other a pos.
+    remove(const T& value) – Elimina todos los elementos con valor value.
+    remove_if(UnaryPredicate p) – Elimina todos los elementos que cumplen el predicado p.
+    reverse() – Invierte el orden de los elementos en la lista.
+    unique() – Elimina los elementos consecutivos duplicados en la lista.
+    unique(BinaryPredicate p) – Elimina los elementos consecutivos duplicados usando una función de comparación p.
+    sort() – Ordena los elementos en la lista.
+    sort(Compare comp) – Ordena los elementos en la lista usando una función de comparación comp.
+
+
+
+Constructores y Destructor
+
+    vector() – Crea un vector vacío.
+    explicit vector(size_type count) – Crea un vector con un número específico de elementos, todos inicializados con el valor predeterminado.
+    vector(size_type count, const T& value) – Crea un vector con count elementos, todos inicializados a value.
+    vector(InputIt first, InputIt last) – Crea un vector copiando el rango de elementos [first, last).
+    vector(const vector& other) – Constructor de copia.
+    vector(vector&& other) noexcept – Constructor de movimiento.
+    vector(std::initializer_list<T> init) – Crea un vector a partir de una lista de inicialización.
+    ~vector() – Destructor del vector.
+
+Operadores
+
+    operator= – Operador de asignación.
+    assign(count, const T& value) – Reemplaza el contenido del vector con count copias de value.
+    assign(InputIt first, InputIt last) – Reemplaza el contenido del vector copiando el rango [first, last).
+    assign(std::initializer_list<T> ilist) – Reemplaza el contenido del vector con los elementos de ilist.
+
+Element Access (Acceso a elementos)
+
+    at(size_type pos) – Retorna una referencia al elemento en la posición pos, lanzando una excepción si pos está fuera del rango.
+    operator[] – Accede al elemento en la posición pos sin comprobación de rango.
+    front() – Retorna una referencia al primer elemento.
+    back() – Retorna una referencia al último elemento.
+    data() – Retorna un puntero directo al arreglo subyacente utilizado para almacenar los elementos.
+
+Iteradores
+
+    begin() – Retorna un iterador al primer elemento.
+    end() – Retorna un iterador al final del vector.
+    rbegin() – Retorna un iterador inverso al primer elemento (último del vector).
+    rend() – Retorna un iterador inverso al final del vector (antes del primer elemento).
+    cbegin() – Retorna un iterador constante al primer elemento.
+    cend() – Retorna un iterador constante al final.
+    crbegin() – Retorna un iterador constante inverso al primer elemento.
+    crend() – Retorna un iterador constante inverso al final.
+
+Capacidad
+
+    empty() – Retorna true si el vector está vacío.
+    size() – Retorna el número de elementos en el vector.
+    max_size() – Retorna el número máximo de elementos que el vector puede contener.
+    reserve(size_type new_cap) – Aumenta la capacidad del vector a new_cap si new_cap es mayor que la capacidad actual.
+    capacity() – Retorna la capacidad actual del vector (el tamaño reservado).
+    shrink_to_fit() – Reduce la capacidad para ajustarse al tamaño actual.
+
+Modificadores
+
+    clear() – Elimina todos los elementos del vector.
+    insert(const_iterator pos, const T& value) – Inserta value en la posición pos.
+    insert(const_iterator pos, T&& value) – Inserta value en la posición pos (movimiento).
+    insert(const_iterator pos, size_type count, const T& value) – Inserta count copias de value en pos.
+    insert(const_iterator pos, InputIt first, InputIt last) – Inserta los elementos en el rango [first, last) en pos.
+    insert(const_iterator pos, std::initializer_list<T> ilist) – Inserta los elementos de ilist en pos.
+    emplace(const_iterator pos, Args&&... args) – Construye un elemento en pos.
+    erase(const_iterator pos) – Elimina el elemento en pos.
+    erase(const_iterator first, const_iterator last) – Elimina el rango de elementos [first, last).
+    push_back(const T& value) – Añade value al final del vector.
+    push_back(T&& value) – Añade value al final del vector (movimiento).
+    emplace_back(Args&&... args) – Construye un elemento al final del vector.
+    pop_back() – Elimina el último elemento.
+    resize(size_type count) – Cambia el tamaño del vector a count elementos.
+    resize(size_type count, const T& value) – Cambia el tamaño del vector a count elementos, inicializando nuevos elementos con value.
+    swap(vector& other) – Intercambia el contenido del vector con other.
+
+Funciones Especiales para Vector
+
+    reserve(size_type new_cap) – Aumenta la capacidad del vector, lo que puede ser útil si sabes que necesitarás más espacio y deseas evitar las realocaciones frecuentes.
+    shrink_to_fit() – Libera el espacio no utilizado, ajustando la capacidad para igualarla al tamaño actual. Esto puede reducir el uso de memoria, aunque depende de la implementación si se cumple siempre.
